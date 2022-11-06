@@ -1,0 +1,17 @@
+﻿@model MusicaBartolomeNavarroCesar.Models.Genre
+@{
+    ViewData["Title"] = "lIstDisc Page";
+
+}
+<h3>Canciones del genero</h3>
+<hr />
+<ul>
+    @foreach (var disc in Model.Tracks)
+    {
+        <li>@disc.Name</li>
+    }
+</ul>
+<div>
+    <br />
+    <a asp-action="Index"><input type="button" class="btn btn-primary" value="Volver a la lista" /></a>
+</div>

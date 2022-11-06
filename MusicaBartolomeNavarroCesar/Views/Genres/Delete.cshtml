@@ -1,0 +1,27 @@
+﻿@model MusicaBartolomeNavarroCesar.Models.Genre
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Borrar</h1>
+
+<h3>¿Estas seguro de borrar este género?</h3>
+<div>
+    <h4>Genre</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="GenreId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Volver a la lista</a>
+    </form>
+</div>

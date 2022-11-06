@@ -1,0 +1,53 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "ChinookContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": "Data",
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "MusicaBartolomeNavarroCesar",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 2,
+   "Tables": [
+      {
+         "Name": "[dbo].[Album]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Artist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Genre]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Track]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "(LocalDB)\\MSSQLLocalDB.Chinook",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": true,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

@@ -1,0 +1,42 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+@if (SignInManager.IsSignedIn(User)) 
+{
+    <h2>La Discogr&aacute;fica</h2>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="/img/album.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">&Aacute;lbums</h5>
+            <p class="card-text">Aqui encontrar&aacute;s informaci&oacute;n de una amplia variedad de &Aacute;lbums.</p>
+            <a asp-controller="Albums" asp-action="Index" class="btn btn-primary">&Aacute;lbums</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src=/img/artista.jpg alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Artistas</h5>
+            <p class="card-text">Aqui encontrar&aacute;s informaci&oacute;n de una amplia variedad de Artistas.</p>
+            <a asp-controller="Artists" asp-action="Index" class="btn btn-primary">Artistas</a>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src=/img/genres.png alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Géneros</h5>
+            <p class="card-text">Descubre música por géneros.</p>
+            <a asp-controller="Genres" asp-action="Index" class="btn btn-primary">Géneros</a>
+        </div>
+    </div>
+}
+else
+{
+    <h1>La Discográfica</h1>
+    <h2>Entra y descubre la mejor música</h2>
+}
+

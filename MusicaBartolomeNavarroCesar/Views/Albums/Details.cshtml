@@ -1,0 +1,37 @@
+﻿@model MusicaBartolomeNavarroCesar.Models.Album
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalles del Disco</h1>
+
+<div>
+    <h4>Disco</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Artist)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Artist.Name)
+        </dd>
+    </dl>
+</div>
+<h2>Listado de canciones del Album</h2>
+<ul>
+    @foreach(var song in Model.Tracks)
+    {
+        <li>@song.Name - (@song.Genre.Name)</li>
+    }
+</ul>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.AlbumId"><input type="button" class="btn btn-warning" value="Editar"/></a> 
+    <a asp-action="Index"><input type="button" class="btn btn-primary" value="Volver a la lista"/></a>
+</div>

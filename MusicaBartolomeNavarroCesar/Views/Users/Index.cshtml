@@ -1,0 +1,40 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IEnumerable<IdentityUser>
+@inject UserManager<IdentityUser> _MiManager
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Listado de Usuarios</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                rol
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (IdentityUser user in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => user.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => user.Email)
+                </td>
+                @foreach(var rol in _MiManager.GetRolesAsync(user).Result)
+                {
+                    <td>@rol</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

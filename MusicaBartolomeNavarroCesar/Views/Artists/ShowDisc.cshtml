@@ -1,0 +1,17 @@
+﻿@model MusicaBartolomeNavarroCesar.Models.Artist
+@{
+    ViewData["Title"] = "lIstDisc Page";
+    
+}
+<h3>Albums del Artista</h3>
+<hr/>
+<ul>
+    @foreach(var disc in Model.Albums)
+    {
+        <li>@disc.Title</li>
+    }
+</ul>
+<div>
+    <br />
+    <a asp-action="Index"><input type="button" class="btn btn-primary" value="Volver a la lista" /></a>
+</div>
